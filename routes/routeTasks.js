@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
     }
 
     try {
-        if (data.desscription && data.project_id) {
+        if (data.description && data.project_id) {
             const task = await db.addTask(data);
 
             if (task) {

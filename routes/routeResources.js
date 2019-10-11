@@ -9,7 +9,7 @@ router.get('/', async (req,res) => {
         const resources = await db.getResources();
         
   
-        if (projects.length) {
+        if (resources.length) {
             res.status(200).json(resources);
         } else {
             res.status(400).json({

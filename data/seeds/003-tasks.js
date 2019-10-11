@@ -6,7 +6,7 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('tasks').insert([
         {
-          id: 1,
+          project_id: 1,
           description: 'task description',
           notes: 'the task notes',
           completed: true
