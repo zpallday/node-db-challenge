@@ -20,7 +20,7 @@ exports.up = function(knex) {
 })
    .createTable('projects-resources', (tbl) => {
        tbl.integer('project_id').notNullable().references();
-       tbl.integer('resouce_id').notNullable().references();
+       tbl.integer('resource_id').notNullable().references();
    })
 
 
@@ -32,7 +32,7 @@ exports.up = function(knex) {
 exports.down = function(knex) {
   return (
       knex.schema
-      .dropTableIfExists('projects-resources')
+      // .dropTableIfExists('projects-resources')
       .dropTableIfExists('tasks')
       .dropTableIfExists('resources')
       .dropTableIfExists('projects')
