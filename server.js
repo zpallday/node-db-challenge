@@ -1,13 +1,13 @@
 const express = require('express');
 const helmet = require('helmet');
-// const routeProjects = require('./routes/routeProjects');
+const routeProjects = require('./routes/routeProjects');
 
 const server = express();
 
 server.use(helmet());
 server.use(express.json());
 
-// server.use('/api/projects', routeProjects);
+server.use('/api/projects', routeProjects);
 
 
 
